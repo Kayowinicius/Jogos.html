@@ -7,51 +7,66 @@
     <title>GameBox</title>
 </head>
 <body>
-    <div class="header">
-        <h1>GameBox</h1>
-        <hr>
-        <nav class = "nav-links">
-            <a href="#Ação">Ação</a>
+    <div class="header"> <!-- Container criado para abrigar o título e os links das categorias -->
+        <h1 id="titulo">GameBox</h1>
+        <nav class = "links-ancora">
+            <a href="#Acao">Ação</a>
             <a href="#Plataforma">Plataforma</a>
             <a href="#Terror">Terror</a>
         </nav>
-        <hr>
     </div>
-    
-    <section id="Ação">
-    </section>
 
-    <section id="Plataforma">
-    </section>
-
-    <section id="Terror">
-    </section>
-
-
-    <div>
-        <h2>Jogos</h2>
+    <div class="sobre"> <!-- Container criado para abrigar os subtítulos e a explicação do serviço fictício-->
+        <h2 class="subtitulo">Sobre o Serviço</h2>
         
-        <h3>Ação</h3>
-        <div class="categorias">
-            <img src="https://tse4.mm.bing.net/th?id=OIP.kWq8cTgN75tLiMSmfoEmmQHaJx&w=200&h=264&c=7" alt="Assassin's Creed IV" width="">
-            <img src="https://tse3.mm.bing.net/th?id=OIP.pGkaDLBj2Ohb6-qHCITm8AHaJI&w=200&h=246&c=7" alt="Just Cause 2" height="264">
-            <img src="https://bdjogos.com.br/capas/24175-call-of-duty-black-ops-6-capa-1.webp" alt="Black Ops 6" width="200" height="264">
-            <img src="https://www.closeupshop.fr/media/oart_0/oart_t/oart_66144/963291_G867740.JPG" alt="The Last Of Us" width="200" height="264">
+        <section> <!-- Usamos sections para lidar com a parte do texto descritivo, tornando menos repetitivo -->
+            <p id="texto">
+                A GameBox é um serviço de assinatura mensal, trimestral ou anual. Com uma assinatura ativa,<br>
+                você terá acesso aos melhores jogos de ação, plataforma e terror, tudo isso pagando um valor acessível.<br>
+                Venha fazer parte da equipe GameBox, você não irá se arrepender!
+            </p>
+        </section>
+
+        <h2 class="subtitulo">Catálogo de Jogos</h2>
+    </div>
+
+        <!-- Criamos três containers diferentes, um para cada categoria e dentro deles inserimos 4 imagens representando capas de jogos e 1 indicando que há mais jogos(3 pontos) -->
+
+        <div class="container-categorias">
+            <h2>Ação</h2>
+            <div id="Acao" class="carrossel">
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/2618/Y02ljdBodKFBiziorYgqftLE.png" alt="The Last Of Us 2" width="300" height="400">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/f/f2/Just_Cause_3_cover_art.jpg" alt="Just Cause 3" width="300" height="400">
+                <img src="https://bdjogos.com.br/capas/24175-call-of-duty-black-ops-6-capa-1.webp" alt="Black Ops 6" width="300" height="400">
+                <img src="https://www.closeupshop.fr/media/oart_0/oart_t/oart_66144/963291_G867740.JPG" alt="The Last Of Us" width="300" height="400">
+                <img class="pontos" src="https://cdn-icons-png.flaticon.com/512/0/859.png" alt="Reticências" width="150" height="150">
+            </div>
         </div>
 
-        <h3>Plataforma</h3>
-        <div class="categorias">
-            <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2023/11/hollow-knight-cover-art.jpg" alt="Hollow Knight" width="200" height="264">
-            <img src="https://nintendoeverything.com/wp-content/uploads/Super-Mario-Wonder-boxart.jpg" alt="Super Mario Wonder" width="200" height="264">
-            <img src="https://geekgamer-capas.nyc3.cdn.digitaloceanspaces.com/36idw59s.jpg" alt="Super Mario Odyssey" width="200" height="264">
-            <img src="https://bdjogos.com.br/capas/4358-celeste-capa-1.jpg" alt="Celeste" width="200" height="264">
+        <div class="container-categorias">
+            <h2>Plataforma</h2>
+            <div id="Plataforma" class="carrossel">
+                <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2023/11/hollow-knight-cover-art.jpg" alt="Hollow Knight" width="300" height="400">
+                <img src="https://nintendoeverything.com/wp-content/uploads/Super-Mario-Wonder-boxart.jpg" alt="Super Mario Wonder" width="300" height="400">
+                <img src="https://geekgamer-capas.nyc3.cdn.digitaloceanspaces.com/36idw59s.jpg" alt="Super Mario Odyssey" width="300" height="400">
+                <img src="https://bdjogos.com.br/capas/4358-celeste-capa-1.jpg" alt="Celeste" width="300" height="400">
+                <img class="pontos" src="https://cdn-icons-png.flaticon.com/512/0/859.png" alt="Reticências" width="150" height="150">
+            </div>
         </div>
-        <h3>Terror</h3>
-        <div class="categorias">
-            <img src="https://bdjogos.com.br/capas/16608-resident-evil-4-capa-1.jpg" alt="Resident Evil 4" width="200" height="260">
-            <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2018/03/outlast-bundle-terror-cover.jpg?tf=3840x" alt="Outlast" height="264">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/7/78/Five_Nights_at_Freddy%27s_Security_Breach_capa.jpg" alt="Five Nights" width="200" height="264">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/1/1b/Little_Nightmares_capa_do_jogo.jpg" alt="Little Nigthmares" width="200" height="264">
-    </div>
+        <div class="container-categorias">
+            <h2>Terror</h2>
+            <div id="Terror" class="carrossel">
+                <img src="https://bdjogos.com.br/capas/16608-resident-evil-4-capa-1.jpg" alt="Resident Evil 4" width="300" height="400">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/9/9f/Outlast_Cover_Art.jpg" alt="Outlast" width="300" height="400">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/7/78/Five_Nights_at_Freddy%27s_Security_Breach_capa.jpg" alt="Five Nights" width="300" height="400">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/1/1b/Little_Nightmares_capa_do_jogo.jpg" alt="Little Nigthmares" width="300" height="400">
+                <img class="pontos" src="https://cdn-icons-png.flaticon.com/512/0/859.png" alt="Reticências" width="150" height="150">
+            </div>
+        </div>
+
+        <!-- O footer foi criado para criar uma aparência de site mais real -->
+        <footer class="header">
+            <h2>© Feito por Igor Yanko e Kayo Winicius</h2>
+        </footer>
 </body>
 </html>
