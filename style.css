@@ -1,69 +1,115 @@
-body {
+html { /* Para a rolagem ficar mais suave */
+    scroll-behavior: smooth;
+}
+
+body { /* Zerando espaçamentos, definindo fonte e mudando o background */
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #5d8aa8;
+    background-color: #3e3769;
 }
 
 .header {
-    display: grid;
-    grid-template-columns: 2fr 1fr auto;
-    background-color: #6A00F4;
+    position: relative; /* Colocamos relative para centralizar o titulo com os subtitulos */
+    display: flex; /* Flex para organizar os itens horizontalmente */
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
     color: #fff;
-    text-align:center;
-    margin: 0px 30px;
-    
+    padding: 2rem 1rem; 
 }
 
-.nav-links {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-end;
-   justify-content: center;
-   gap: 10px;
-   height: 100%;
-   
-    
+#titulo { /* As 4 primeiras propriedades utilizadas para garantir a centralização do titulo com o subtitulo */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin: 0;
+    color: #fff;
+    font-size: 2.5rem;
 }
 
-.nav-links a {
-    font-weight: 18px;
-    font-weight: 600;
+.links-ancora { 
+   margin-left: auto; /* Pros links ficarem afastados do titulo, já que o position dele é absolute */
+}
+
+.links-ancora a { /* Estilização dos links para parecerem botões */
     color: white;
+    font-weight: 500;
     text-decoration: none;
     padding: 5px 10px;
-    background-color: rgba(219, 46, 46, 0.2);
+    background-color: rgba(72, 61, 139, 0.3);
     border-radius: 20px;
-   
-    
-
 }
 
-.nav-links a:hover {
+.links-ancora a:hover { /* Hover que muda a cor do fundo dos botões e adiciona um sublinhado */
     text-decoration: underline;
-   
+    background-color: rgba(72, 61, 139, 0.9);
 }
 
-.categorias {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 0px 20px 30px 0px;
-    
-}
-
-h2 {
+.sobre { /* Para a justificação dos textos presentes */
+    margin: 2rem auto;
+    max-width: fit-content;
     text-align: center;
-    text-decoration: underline;
+}
+
+#texto { /* Justificação e estilização do texto de explicação  */
+    color: #fff;
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 25px;
+    line-height: 1.6;
+    font-weight: 350;
+}
+
+.subtitulo { /* Justificação e estilização dos subtitulos  */
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #fff;
+    display: inline-block;
     
 }
 
-h3 {
-    margin-left: 0px;
-    margin-top: 20px;
-    background-color: white;
-    margin-bottom: 0px;
+.container-categorias { /* Container para as categorias  */
+    display: flex; /* Para colocar o conteúdo horizontalmente */
+    margin-bottom: 2rem;
+    min-height: 400px; /* Tamanho da imagem */
 }
 
-#acao {
-    background-color:
+.container-categorias h2 { /* Estilizamos aqui para ser tipo o título da categoria */
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    width: 10rem;
+    display: flex; /* Aqui foi utilizado para poder centralizar o h2 */
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl; /* Colocar o h2 de lado */
+    transform: rotate(180deg); /* Virar o h2 para ficar mais fácil de ler */
+    font-size: 2.5rem;
+}
+
+.carrossel { /* Container para abrigar as fotos, como se fosse um carrossel, mas estático */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap; /* Permite que as linhas quebrem caso não haja mais espaço para as imagens*/
+    background-color: rgba(255, 255, 255, 0.02); /* Fundo translúcido */
+    flex: 1;
+}
+
+.pontos { /* Foto representando que há mais jogos*/
+    margin-left: 8rem;
+}
+
+img { 
+    border-radius: 20px; /* Arrendodamento das imagens */
+}
+
+footer {
+    margin-top: 2rem; /* Separando o footer do carrossel */
 }
